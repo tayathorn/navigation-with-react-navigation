@@ -24,7 +24,7 @@ export const HomeRoutes = {
     screen: CartoonList,
     navigationOptions: () => ({
       ...navigationOption,
-      title: 'CartoonList'
+      // title: 'Cartoon List'
     })
   }
 }

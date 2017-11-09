@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
     width: 100,
     height: 100,
   },
-  
+
   detailWrapper: {
     paddingHorizontal: 20,
   },
@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: colorBase.darkGrey,
   },
-  
+
   cartoonDetailValue: {
     fontWeight: 'normal',
     color: colorBase.darkGrey,
@@ -72,8 +72,9 @@ const styles = StyleSheet.create({
 
 export default class CartoonList extends Component {
 
-  _openDetail = () => {
-
+  _pushNavigation = (name) => {
+    // push to CartoonList again, again and again
+    this.props.navigation.navigate('SimpleStack', { name })
   }
 
   _renderHeader = () => {
@@ -86,27 +87,28 @@ export default class CartoonList extends Component {
 
   _renderCartoonList = () => {
     return cartoon.map((cartoon) => {
+      let { id, name, premiere_date, current_season, profile_picture } = cartoon
       return (
         <TouchableOpacity
-          key={cartoon.id}
+          key={id}
           style={styles.cartoonListWrapper}
-          onPress={() => this._openDetail()}
+          onPress={() => this._pushNavigation(name)}
         >
           <View style={styles.imgWrapper} >
-            <Image style={styles.cartoonImg} source={{ uri: cartoon.profile_picture }} /> 
+            <Image style={styles.cartoonImg} source={{ uri: profile_picture }} />
           </View>
           <View style={styles.detailWrapper} >
-            <Text style={styles.cartoonTitle} >{cartoon.name}</Text>
+            <Text style={styles.cartoonTitle} >{name}</Text>
             <Text style={styles.cartoonDetailTitle} >
               {`Premiere date: `}
-              <Text style={styles.cartoonDetailValue} >{cartoon.premiere_date}</Text>
+              <Text style={styles.cartoonDetailValue} >{premiere_date}</Text>
             </Text>
             <Text style={styles.cartoonDetailTitle} >
               {`Current season: `}
-              <Text style={styles.cartoonDetailValue} >{cartoon.current_season}</Text>
+              <Text style={styles.cartoonDetailValue} >{current_season}</Text>
             </Text>
           </View>
-          
+
         </TouchableOpacity>
       )
     })
@@ -119,5 +121,22 @@ export default class CartoonList extends Component {
         {this._renderCartoonList()}
       </ScrollView>
     )
+  }
+}
+
+CartoonList.navigationOptions = props => {
+
+  const { navigation } = props;
+  const { state, setParams } = navigation;
+  const { params } = state
+
+  let title = 'Cartoon List'
+  if(params) {
+    const { name } = params
+    title = name ? name : title
+  }
+
+  return {
+    title
   }
 }
