@@ -8,14 +8,8 @@ import colorBase from '../utils/colorBase'
 
 import Home from '../Screen/Home'
 import CartoonList from '../Screen/CartoonList'
+import { navigationOption } from './config'
 
-
-const navigationOption = {
-  headerStyle: { backgroundColor: colorBase.white },
-  headerTitleStyle: { color: colorBase.pink },
-  headerTintColor: colorBase.pink,
-  headerBackTitleStyle: { color: colorBase.pink },
-}
 
 export const HomeRoutes = {
   SimpleStack: {
@@ -24,7 +18,6 @@ export const HomeRoutes = {
     screen: CartoonList,
     navigationOptions: () => ({
       ...navigationOption,
-      // title: 'Cartoon List'
     })
   }
 }
