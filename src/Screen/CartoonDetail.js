@@ -21,9 +21,9 @@ const styles = StyleSheet.create({
     backgroundColor: colorBase.whiteGrey,
   },
 
-  header: {
-    height: 50,
-    backgroundColor: colorBase.white,
+  headerCover: {
+    height: 200,
+    backgroundColor: colorBase.nudeBeige,
     justifyContent: 'center',
     paddingHorizontal: MARGIN,
   },
@@ -33,9 +33,14 @@ const styles = StyleSheet.create({
     fontSize: 16,
     color: colorBase.darkBlack,
   },
+  
+  cartoonImg: {
+    // width: 100,
+    height: 150,
+  },
 })
 
-export default class CartoonFeed extends Component {
+export default class CartoonDetail extends Component {
 
   _pushNavigation = (name, gallery) => {
     // push to CartoonFeed again, again and again
@@ -43,9 +48,15 @@ export default class CartoonFeed extends Component {
   }
 
   _renderHeader = () => {
+    const { navigation } = this.props;
+    const { state, setParams } = navigation;
+    const { params } = state
+    const { name, gallery } = params
+
     return (
-      <View style={styles.header} >
-        <Text style={styles.headerText} >Cartoon Network</Text>
+      <View style={styles.headerCover} >
+        <Text style={styles.headerText} >{name}</Text>
+        <Image style={styles.cartoonImg} source={{ uri: gallery[0] }} />
       </View>
     )
   }
@@ -60,13 +71,17 @@ export default class CartoonFeed extends Component {
   }
 }
 
-CartoonFeed.navigationOptions = props => {
+CartoonDetail.navigationOptions = props => {
 
   const { navigation } = props;
   const { state, setParams } = navigation;
   const { params } = state
 
-  let title = 'Simple Stack'
+  let title = 'Cartoon Detail'
+  // if(params) {
+  //   const { name } = params
+  //   title = name ? name : title
+  // }
 
   return {
     title

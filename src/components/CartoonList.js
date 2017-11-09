@@ -74,12 +74,12 @@ export default class CartoonList extends Component {
 
   _renderCartoonList = () => {
     return cartoon.map((cartoon) => {
-      let { id, name, premiere_date, current_season, profile_picture } = cartoon
+      let { id, name, premiere_date, current_season, profile_picture, gallery } = cartoon
       return (
         <TouchableOpacity
           key={id}
           style={styles.cartoonListWrapper}
-          onPress={() => this.props.onPress(name)}
+          onPress={() => this.props.onPress(name, gallery)}
         >
           <View style={styles.imgWrapper} >
             <Image style={styles.cartoonImg} source={{ uri: profile_picture }} />
@@ -110,5 +110,5 @@ export default class CartoonList extends Component {
 }
 
 CartoonList.defaultProps = {
-  onPress: ()=>{},
+  onPress: () => { },
 }
