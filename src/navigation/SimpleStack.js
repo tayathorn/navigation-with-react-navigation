@@ -1,10 +1,10 @@
 import { StackNavigator } from 'react-navigation'
 
-import CartoonList from '../Screen/CartoonList'
+import CartoonFeed from '../Screen/CartoonFeed'
 
 const SimpleStack = StackNavigator({
-  CartoonList: {
-    screen: CartoonList,
+  CartoonFeed: {
+    screen: CartoonFeed,
   }
 },
 {

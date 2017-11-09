@@ -72,19 +72,6 @@ const styles = StyleSheet.create({
 
 export default class CartoonList extends Component {
 
-  _pushNavigation = (name) => {
-    // push to CartoonList again, again and again
-    this.props.navigation.navigate('SimpleStack', { name })
-  }
-
-  _renderHeader = () => {
-    return (
-      <View style={styles.header} >
-        <Text style={styles.headerText} >Cartoon Network</Text>
-      </View>
-    )
-  }
-
   _renderCartoonList = () => {
     return cartoon.map((cartoon) => {
       let { id, name, premiere_date, current_season, profile_picture } = cartoon
@@ -92,7 +79,7 @@ export default class CartoonList extends Component {
         <TouchableOpacity
           key={id}
           style={styles.cartoonListWrapper}
-          onPress={() => this._pushNavigation(name)}
+          onPress={() => this.props.onPress(name)}
         >
           <View style={styles.imgWrapper} >
             <Image style={styles.cartoonImg} source={{ uri: profile_picture }} />
@@ -116,27 +103,12 @@ export default class CartoonList extends Component {
   render() {
     return (
       <ScrollView style={styles.container} >
-        {this._renderHeader()}
-        {this._renderCartoonList()}
         {this._renderCartoonList()}
       </ScrollView>
     )
   }
 }
 
-CartoonList.navigationOptions = props => {
-
-  const { navigation } = props;
-  const { state, setParams } = navigation;
-  const { params } = state
-
-  let title = 'Simple Stack'
-  if(params) {
-    const { name } = params
-    title = name ? name : title
-  }
-
-  return {
-    title
-  }
+CartoonList.defaultProps = {
+  onPress: ()=>{},
 }
