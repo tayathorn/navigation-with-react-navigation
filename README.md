@@ -5,11 +5,12 @@
 - `cd navigation-with-react-navigation`
 - `npm install` or `yarn`
 
-# Running
+## Running
 
 - `react-native run-ios`
 - `react-native run-android`
 
+## Notes
 ### Source
 ➜ [react-navigation](https://reactnavigation.org) : navigation based on Javascript. Collaboration between developers from Facebook, Expo and the React community
 
