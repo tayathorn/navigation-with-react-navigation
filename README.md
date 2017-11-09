@@ -17,7 +17,7 @@
 ➜ [theme color](https://dribbble.com/shots/2995715-Music-Player-App-CLIK) : inspiration app color theme from dribble
 
 ### Done
-* [Stack Navigation](https://reactnavigation.org/docs/navigators/stack)
+* [Stack Navigator](https://reactnavigation.org/docs/navigators/stack)
    * [Navigation Options](https://reactnavigation.org/docs/navigators/navigation-options)
       * change title
       * style header
