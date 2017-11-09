@@ -8,14 +8,18 @@ import colorBase from '../utils/colorBase'
 
 import Home from '../Screen/Home'
 import CartoonList from '../Screen/CartoonList'
+
+import SimpleStack from './SimpleStack'
+
 import { navigationOption } from './config'
+
 
 
 export const HomeRoutes = {
   SimpleStack: {
     name: 'Stack Example',
     description: 'A card stack - CartoonList',
-    screen: CartoonList,
+    screen: SimpleStack,
     navigationOptions: () => ({
       ...navigationOption,
     })
