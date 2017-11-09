@@ -4,7 +4,7 @@ export const cartoon = [
     "name": "Adventure Time",
     "premiere_date": "April 5, 2010",
     "current_season": 9,
-    "profile_picture": "http://www.indiewire.com/wp-content/uploads/2015/03/adventure-time.png?w=780",
+    "profile_picture": "https://yt3.ggpht.com/-CSQcGxnR6vM/AAAAAAAAAAI/AAAAAAAAAAA/DLEXndGLfRI/s900-c-k-no-mo-rj-c0xffffff/photo.jpg",
     "detail": {
       "genre": [
         "comedy",

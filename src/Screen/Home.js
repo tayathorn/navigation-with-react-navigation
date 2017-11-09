@@ -21,11 +21,12 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderBottomWidth: 1,
     borderBottomColor: colorBase.whiteGrey,
-    padding: 10,
+    padding: 20,
   },
 
   listTitle: {
     fontWeight: 'bold',
+    color: colorBase.darkBlack,
   },
 
   listDescription: {

@@ -23,7 +23,8 @@ export const HomeRoutes = {
     description: 'A card stack - CartoonList',
     screen: CartoonList,
     navigationOptions: () => ({
-      ...navigationOption
+      ...navigationOption,
+      title: 'CartoonList'
     })
   }
 }
