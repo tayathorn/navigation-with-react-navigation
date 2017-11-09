@@ -35,6 +35,11 @@ const styles = StyleSheet.create({
 
 export default class Home extends Component {
 
+  _onPressList = (routeName) => {
+
+    this.props.navigation.navigate(routeName)
+  }
+
   _renderItemList = () => {
     return Object.keys(HomeRoutes).map((routeName) => {
       let { name, description } = HomeRoutes[routeName]
@@ -42,6 +47,7 @@ export default class Home extends Component {
         <TouchableOpacity
           key={routeName}
           style={styles.listWrapper}
+          onPress={()=>this._onPressList(routeName)}
         > 
           <Text style={styles.listTitle} >{name}</Text>
           <Text style={styles.listDescription} >{description}</Text>

@@ -9,21 +9,22 @@ import colorBase from '../utils/colorBase'
 import Home from '../Screen/Home'
 import CartoonList from '../Screen/CartoonList'
 
-const styles = StyleSheet.create({
-  defaultNavHeaderStyle: {
-    backgroundColor: colorBase.white,
-  },
 
-  defaultNavTitleStyle: {
-    color: colorBase.pink,
-  },
-})
+const navigationOption = {
+  headerStyle: { backgroundColor: colorBase.white },
+  headerTitleStyle: { color: colorBase.pink },
+  headerTintColor: colorBase.pink,
+  headerBackTitleStyle: { color: colorBase.pink },
+}
 
 export const HomeRoutes = {
   SimpleStack: {
     name: 'Stack Example',
     description: 'A card stack - CartoonList',
     screen: CartoonList,
+    navigationOptions: () => ({
+      ...navigationOption
+    })
   }
 }
 
@@ -33,13 +34,13 @@ export const RootApp = StackNavigator({
     screen: Home,
     navigationOptions: () => ({
       title: 'React Navigation',
-      headerStyle: styles.defaultNavHeaderStyle,
-      headerTitleStyle: styles.defaultNavTitleStyle,
+      headerBackTitle: 'Home',
+      ...navigationOption
     })
   },
-}, 
-{
-  initialRouteName: 'Home',
-}
+},
+  {
+    initialRouteName: 'Home',
+  }
 )
 
