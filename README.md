@@ -22,3 +22,4 @@
       * change title
       * style header
       * style back button
+      * use multiple StackNavigator
