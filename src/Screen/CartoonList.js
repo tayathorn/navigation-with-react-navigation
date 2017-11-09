@@ -130,7 +130,7 @@ CartoonList.navigationOptions = props => {
   const { state, setParams } = navigation;
   const { params } = state
 
-  let title = 'Cartoon List'
+  let title = 'Simple Stack'
   if(params) {
     const { name } = params
     title = name ? name : title
