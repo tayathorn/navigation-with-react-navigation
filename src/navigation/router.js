@@ -7,6 +7,7 @@ import { StackNavigator } from 'react-navigation'
 import colorBase from '../utils/colorBase'
 
 import Home from '../Screen/Home'
+import CartoonList from '../Screen/CartoonList'
 
 const styles = StyleSheet.create({
   defaultNavHeaderStyle: {
@@ -18,7 +19,16 @@ const styles = StyleSheet.create({
   },
 })
 
+export const HomeRoutes = {
+  SimpleStack: {
+    name: 'Stack Example',
+    description: 'A card stack - CartoonList',
+    screen: CartoonList,
+  }
+}
+
 export const RootApp = StackNavigator({
+  ...HomeRoutes,
   Home: {
     screen: Home,
     navigationOptions: () => ({
@@ -27,4 +37,9 @@ export const RootApp = StackNavigator({
       headerTitleStyle: styles.defaultNavTitleStyle,
     })
   },
-})
+}, 
+{
+  initialRouteName: 'Home',
+}
+)
+
