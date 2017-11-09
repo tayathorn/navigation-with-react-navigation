@@ -1,4 +1,14 @@
-# navigation-with-react-navigation
+# Navigation with react-navigation
+
+## Installation
+- `git clone https://github.com/tayathorn/navigation-with-react-navigation.git`
+- `cd navigation-with-react-navigation`
+- `npm install` or `yarn`
+
+# Running
+
+- `react-native run-ios`
+- `react-native run-android`
 
 ### Source
 ➜ [react-navigation](https://reactnavigation.org) : navigation based on Javascript. Collaboration between developers from Facebook, Expo and the React community
