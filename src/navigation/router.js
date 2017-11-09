@@ -7,24 +7,20 @@ import { StackNavigator } from 'react-navigation'
 import colorBase from '../utils/colorBase'
 
 import Home from '../Screen/Home'
-import CartoonList from '../Screen/CartoonList'
+
+import SimpleStack from './SimpleStack'
+
+import { navigationOption } from './config'
 
 
-const navigationOption = {
-  headerStyle: { backgroundColor: colorBase.white },
-  headerTitleStyle: { color: colorBase.pink },
-  headerTintColor: colorBase.pink,
-  headerBackTitleStyle: { color: colorBase.pink },
-}
 
 export const HomeRoutes = {
   SimpleStack: {
     name: 'Stack Example',
-    description: 'A card stack - CartoonList',
-    screen: CartoonList,
+    description: 'A card stack - CartoonFeed',
+    screen: SimpleStack,
     navigationOptions: () => ({
       ...navigationOption,
-      // title: 'Cartoon List'
     })
   }
 }
