@@ -31,7 +31,6 @@ export const RootApp = StackNavigator({
     screen: Home,
     navigationOptions: () => ({
       title: 'React Navigation',
-      headerBackTitle: 'Home',
       ...navigationOption
     })
   },
