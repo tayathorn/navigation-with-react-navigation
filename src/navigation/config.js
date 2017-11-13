@@ -6,3 +6,10 @@ export const navigationOption = {
   headerTintColor: colorBase.pink,
   headerBackTitleStyle: { color: colorBase.pink },
 }
+
+export const tabNavigationOption = {
+  headerStyle: { backgroundColor: colorBase.cremeBeige },
+  headerTitleStyle: { color: colorBase.white },
+  headerTintColor: colorBase.white,
+  headerBackTitleStyle: { color: colorBase.white },
+}

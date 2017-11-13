@@ -9,8 +9,9 @@ import colorBase from '../utils/colorBase'
 import Home from '../Screen/Home'
 
 import SimpleStack from './SimpleStack'
+import SimpleTab from './TabNavigator'
 
-import { navigationOption } from './config'
+import { navigationOption, tabNavigationOption } from './config'
 
 
 
@@ -21,6 +22,14 @@ export const HomeRoutes = {
     screen: SimpleStack,
     navigationOptions: () => ({
       ...navigationOption,
+    })
+  },
+  SimpleTab: {
+    name: 'Tab Example',
+    description: 'Tabs following platform conventions',
+    screen: SimpleTab,
+    navigationOptions: () => ({
+      ...tabNavigationOption,
     })
   }
 }
