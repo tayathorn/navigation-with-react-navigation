@@ -16,7 +16,7 @@ const MARGIN = 10
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colorBase.whiteGrey,
+    backgroundColor: colorBase.whiteGray,
   },
 
   header: {
@@ -41,10 +41,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 
-  imgWrapper: {
-
-  },
-
   cartoonImg: {
     width: 100,
     height: 100,
@@ -61,12 +57,12 @@ const styles = StyleSheet.create({
 
   cartoonDetailTitle: {
     fontWeight: 'bold',
-    color: colorBase.darkGrey,
+    color: colorBase.darkGray,
   },
 
   cartoonDetailValue: {
     fontWeight: 'normal',
-    color: colorBase.darkGrey,
+    color: colorBase.darkGray,
   },
 })
 
@@ -81,7 +77,7 @@ export default class CartoonList extends Component {
           style={styles.cartoonListWrapper}
           onPress={() => this.props.onPress(name, gallery)}
         >
-          <View style={styles.imgWrapper} >
+          <View>
             <Image style={styles.cartoonImg} source={{ uri: profile_picture }} />
           </View>
           <View style={styles.detailWrapper} >

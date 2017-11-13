@@ -8,17 +8,16 @@ import {
   Text,
 } from 'react-native'
 
-import { cartoon } from '../data/cartoon'
-import colorBase from '../utils/colorBase'
+import colorBase from '../../utils/colorBase'
 
-import CartoonList from '../components/CartoonList'
+import CartoonList from '../../components/CartoonList'
 
 const MARGIN = 10
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: colorBase.whiteGrey,
+    backgroundColor: colorBase.whiteGray,
   },
 
   header: {
