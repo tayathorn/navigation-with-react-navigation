@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     height: 70,
     justifyContent: 'center',
     borderBottomWidth: 1,
-    borderBottomColor: colorBase.whiteGrey,
+    borderBottomColor: colorBase.whiteGray,
     padding: 20,
   },
 
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   },
 
   listDescription: {
-    color: colorBase.darkGrey,
+    color: colorBase.darkGray,
   },
 })
 
